@@ -1,5 +1,46 @@
-1.  <?php echo 'if you want to serve PHP code in XHTML or XML documents,
-                use these tags';
-           
-                
- ?>
+<?php
+require './app/autoloader.php'; 
+require './database/db.php';
+
+Autoloader::register(); 
+
+if (isset($_GET['p']))
+{
+    $p = $_GET['p'];
+}
+else{
+    $p ='home';
+}
+
+ob_start();
+
+if ($p === 'home'){
+require './view/home.php';
+
+}elseif($p === 'movie'){
+    require './view/movie.php';
+
+}elseif($p === 'movieSearch'){
+    require './view/movieCat.php';
+
+}elseif($p === 'category'){
+    require './view/category.php';
+
+}elseif($p === 'customer'){
+    require './view/customer.php';
+
+
+}elseif($p === 'rental'){
+     require './view/rental.php';
+
+}elseif($p === 'createRental'){
+    require './view/createRental.php';
+   
+   
+}
+
+
+
+
+$content = ob_get_clean();
+require './view/template/templates.php';
