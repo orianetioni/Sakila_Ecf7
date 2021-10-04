@@ -32,7 +32,7 @@ Prérequis : <br>
 ## Difficultés
 
 <p> J'ai eu beaucoup de mal avec la compréhension de la base de donnée Sakila ce qui m'a pénalisé car je n'ai pas pu <br>
-répondre à la demande du client en intégrant un forulaire de location et rendus .<br>
+répondre à la demande du client en intégrant un forMulaire de location et rendus .<br>
 En effet il y'a beaucoup de foreign key qui m'ont posé problèmes . <br> <p>
 
 
