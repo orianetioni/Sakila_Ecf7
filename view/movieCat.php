@@ -15,9 +15,6 @@ if (isset($_GET['category_id'])) : {
                 <div class="card-body">
                     <p class="card-text"><?= $movie->description ?></p>
                 </div>
-                <div class="card-body text-end">
-                <a class="btn btn-success " href="index.php?p=createRental">Louer</a>
-                </div>
             </div>
         <?php endforeach; ?>
     </div>

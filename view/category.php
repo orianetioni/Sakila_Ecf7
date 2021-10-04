@@ -4,6 +4,7 @@ $categories = new category($category_id = '', $name = '');
 $categories->findAll();
 ?>
 
+
 <div class="container">
     <div class="row m-1">
         <?php foreach ($categories->findAll() as $category) : ?>

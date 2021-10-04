@@ -163,9 +163,4 @@ class movie extends Database
     }
 
 
-    public  function search($search)
-    {
-        $movies = parent::getAll('SELECT * FROM film WHERE title LIKE "%' . $search . '%"');
-        return $movies;
-    }
 }

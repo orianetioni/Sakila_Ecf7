@@ -22,7 +22,8 @@ $movies->findAll();
                     <li class="list-group-item">Année de sortie : <?= $movie->release_year ?></li>
                 </ul>
                 <div class="card-body text-end">
-                <a class="btn btn-success " href="index.php?p=createRental">Louer</a>
+                <a class="btn btn-success " href="index.php?p=rental">Louer</a>
+                <a class="btn btn-danger " href="index.php?p=rental">Retour</a>
                   
                 </div>
             </div>

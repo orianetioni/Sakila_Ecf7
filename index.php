@@ -20,7 +20,7 @@ require './view/home.php';
 }elseif($p === 'movie'){
     require './view/movie.php';
 
-}elseif($p === 'movieSearch'){
+}elseif($p === 'movieCat'){
     require './view/movieCat.php';
 
 }elseif($p === 'category'){
@@ -29,17 +29,10 @@ require './view/home.php';
 }elseif($p === 'customer'){
     require './view/customer.php';
 
-
 }elseif($p === 'rental'){
      require './view/rental.php';
 
-}elseif($p === 'createRental'){
-    require './view/createRental.php';
-   
-   
 }
-
-
 
 
 $content = ob_get_clean();

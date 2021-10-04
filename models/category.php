@@ -14,7 +14,7 @@ class category extends database{
         $this->setname($name);
         
     }
-    //setter
+    
     public function setCategory($category_id) {
         $this->category_id = $category_id;
         return $category_id;
@@ -24,7 +24,7 @@ class category extends database{
         $this->name = $name;
         return $name;
     }
-    //getter
+    
     public function getCategory() {
         return $this->category_id;
     }

@@ -14,21 +14,15 @@ class rental extends database{
    
    protected $_last_update;
 
-    public function __construct($rental_id,$customer_id)
-    {
-        $this->setrental($rental_id);
-        $this->setCustomer($customer_id);
-        
-        
-        
-    }
+
     
     public function setrental($rental_id) {
         $this->rental_id = $rental_id;
         return $rental_id;
     }
+    
     public function setinventory($inventory_id) {
-        $this->inventory_id = $onventory_id;
+        $this->inventory_id = $inventory_id;
         return $inventory_id;
     }
 
@@ -49,15 +43,16 @@ class rental extends database{
         return $return_date;
     }
 
-   
- 
     public function getrental() {
+
         return $this->rental_id;
     }
     public function getinventory() {
+
         return $this->inventory_id;
     }
      public function getCustomer() {
+
         return $this->customer_id;
     }
     public function getrental_date()
@@ -70,16 +65,13 @@ class rental extends database{
         return $this->return_date;
     }
 
-
-
     public  function findAll() {
-        $data = database::getAll("SELECT r.rental_id,r.customer_id,r.inventory_id,c.first_name,c.last_name, f.title
+        $data = database::getAll("SELECT r.rental_id,r.customer_id,r.inventory_id,r.rental_date,r.return_date,c.first_name,c.last_name, f.title
         FROM rental as r
         LEFT JOIN inventory AS i ON r.inventory_id = i.inventory_id
         LEFT JOIN customer AS c ON r.customer_id = c.customer_id
         LEFT JOIN film as f on i.film_id = f.film_id");
         return $data;
-
-        
     }
+   
 }
